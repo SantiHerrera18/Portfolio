@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Technologies from "../components/Technologies.astro";
 ---
 
@@ -17,23 +16,9 @@ import Technologies from "../components/Technologies.astro";
         <p class="text-xl text-slate-600 font-semibold">
           Full stack developer specialized in <strong>frontend</strong>
         </p>
+        <Technologies />
       </div>
       <div class="w-[250px] h-[250px] rounded-full bg-slate-600"></div>
-    </section>
-    <section id="experience">
-      <h2 class="text-3xl font-bold">Experience</h2>
-      <p>I have worked in projects as:</p>
-    </section>
-    <section>
-      <h2 class="text-3xl font-bold mb-3">Projects</h2>
-      <div class="grid grid-cols-2 gap-3">
-        <Card name="Hotelify" img="/Hotelify.jpg" />
-        <Card name="Bytezone" img="/Bytezone.jpg" />
-      </div>
-    </section>
-    <section>
-      <h3 class="text-2xl font-bold mb-3">Technologies</h3>
-      <Technologies />
     </section>
   </main>
 </Layout>

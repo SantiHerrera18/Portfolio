@@ -2,12 +2,22 @@
 
 ---
 
-<div class="bg-slate-900 bottom-[15px] w-fit p-3 text-xl">
-  <nav class="w-full">
-    <ul class="flex justify-center gap-4">
-      <li><a href="#experience">Contact me</a></li>
-      <li>Projects</li>
-      <li>Experience</li>
-    </ul>
+<div class="absolute right-[50vw] bottom-[15px] p-3">
+  <nav class="flex justify-center items-center transition-all">
+    <a href="/" class="inline-block"
+      ><img src="/home.svg" alt="Home" class="w-7 hover:w-10" /></a
+    >
+    <a href="/projects"
+      ><img src="/projects.svg" alt="Projects" class="w-7 hover:w-10" /></a
+    >
+    <a href="/experience"
+      ><img src="/experience.svg" alt="Experience" class="w-7 hover:w-10" /></a
+    >
   </nav>
 </div>
+<style>
+  a > img {
+    transition: all;
+    transition-duration: 150ms;
+  }
+</style>

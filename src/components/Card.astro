@@ -2,9 +2,7 @@
 const { name, img } = Astro.props;
 ---
 
-<div
-  class="bg-gradient-to-b from-transparent flex flex-col items-center justify-center to-slate-950"
->
+<div class="flex flex-col items-center justify-center">
   <img src=`${img}` class="w-[70%] h-[250px] object-cover" alt="project name" />
   <h3 class="font-semibold text-center">{name}</h3>
 </div>
