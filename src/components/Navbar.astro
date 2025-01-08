@@ -4,23 +4,23 @@
 
 <div class="absolute w-full bottom-[50px] rounded-xl p-3">
   <nav
-    class="flex p-1 justify-center gap-2 w-fit mx-auto h-fit bg-slate-400 px-4 rounded-2xl max-h-[40px] items-center transition-all"
+    class="flex justify-center gap-2 w-fit mx-auto h-fit px-4 border-b border-b-slate-600 pb-3 hover:pb-1 items-center transition-all duration-150"
   >
-    <a href="/" class="inline-block my-2"
+    <a href="/" class="inline-block"
       ><img
         src="/home.svg"
         alt="Home"
         class="w-7 hover:pb-4 hover:drop-shadow-lg scale-110"
       /></a
     >
-    <a href="/projects" class="inline-block my-2"
+    <a href="/projects" class="inline-block"
       ><img
         src="/projects.svg"
         alt="Projects"
         class="w-7 hover:pb-4 hover:drop-shadow-lg"
       /></a
     >
-    <a href="/experience" class="inline-block my-2"
+    <a href="/experience" class="inline-block"
       ><img
         src="/experience.svg"
         alt="Experience"
@@ -34,7 +34,10 @@
     transition: all;
     transition-duration: 150ms;
   }
+  a:hover > img {
+    width: 50px !important;
+  }
   nav:hover > a > img {
-    width: 40px;
+    width: 35px;
   }
 </style>
