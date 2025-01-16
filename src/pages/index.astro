@@ -1,26 +1,84 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Technologies from "../components/Technologies.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Portfolio">
   <main>
-    <section class="h-screen bg-slate-300 flex justify-center items-center">
+    <section class="h-screen flex justify-center items-center">
       <div class="w-[40%]">
         <div class="text-8xl font-bold text-shadow-xl mb-4 flex flex-col">
           <p class="select-none inline-block">Santiago</p>
           <p class="text-slate-600 select-none inline-block">Herrera</p>
         </div>
         <p
-          class="text-xl text-slate-600 font-semibold inline-block w-[85%] text-balance"
+          class="text-xl text-slate-500 font-semibold inline-block w-[85%] text-balance mb-3"
         >
-          Mechatronic Engineer and Full stack developer specialized in <strong
-            >frontend</strong
-          >. I'm passionate for developing innovative and creative solutions
+          <strong>Full Stack Developer</strong> and Mechatronic Engineer specialized
+          in <strong>Frontend</strong>. I'm passionate for developing innovative
+          and creative solutions
         </p>
         <Technologies />
       </div>
-      <div class="w-[250px] h-[250px] rounded-full bg-slate-600"></div>
+      <img
+        class="w-[250px] h-[250px] rounded-full object-cover object-center"
+        src="/Profile.jpg"
+      />
+    </section>
+    <section class="flex flex-col w-[59%] mx-auto h-[80vh]">
+      <h2
+        id="experience"
+        class="text-2xl text-slate-400 font-bold mb-3 inline-block"
+      >
+        Work Experience
+      </h2>
+      <div>
+        <h3 class="text-xl font-semibold">Full Stack Developer</h3>
+        <p>I've contributed to different projects</p>
+      </div>
+    </section>
+    <section class="w-full flex flex-col items-center mb-[20vh]">
+      <h2 id="projects" class="text-3xl font-bold mb-6 inline-block">
+        Projects
+      </h2>
+      <div class="flex gap-3">
+        <Card
+          name="Hotelify"
+          img="/Hotelify.jpg"
+          link="https://proyecto-hoteleria.vercel.app/"
+        />
+        <Card
+          name="Bytezone"
+          img="/Bytezone.jpg"
+          link="https://bytezone-flame.vercel.app/"
+        />
+        <Card
+          name="NewBank"
+          img="/Newbank.jpg"
+          link="https://new-bank-beta.vercel.app/"
+        />
+      </div>
+    </section>
+    <section class="p-2 w-full flex flex-col items-center">
+      <h2 class="text-3xl font-bold mb-3 inline-block">Contact me</h2>
+      <form class="mb-[20vh] flex flex-col justify-center items-center">
+        <div><label for=""></label><input type="text" /></div>
+        <div><label for=""></label><input type="text" /></div>
+        <div><label for=""></label><input type="text" /></div>
+      </form>
     </section>
   </main>
 </Layout>
+<style>
+  input {
+    margin-bottom: 12px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 6px;
+  }
+  input:focus {
+    outline: none;
+  }
+</style>

@@ -5,13 +5,16 @@ const { name, img, link } = Astro.props;
 <a
   href={`${link}`}
   target="_blank"
-  class="flex flex-col items-center justify-center min-w-[250px] min-h-[250px] max-w-[250px] max-h-[250px] overflow-hidden rounded-lg"
+  class="flex relative flex-col items-center justify-center min-w-[250px] min-h-[250px] max-w-[250px] max-h-[250px] overflow-hidden rounded-lg group"
 >
   <div
-    style={`background-image: linear-gradient(transparent, rgba(0, 0, 0, 1)),
-                  url("${img}")`}
-    class="relative z-0 w-[100%] h-[250px] bg-cover bg-center rounded-lg shadow-xl flex flex-col justify-end p-2 hover:scale-105 transition-all duration-150"
+    style={`background-image:  url("${img}")`}
+    class="relative z-0 w-[100%] h-[250px] bg-cover bg-center rounded-lg shadow-xl flex flex-col justify-end p-2 group-hover:scale-125 transition-all duration-150 group"
   >
-    <h3 class="relative z-10 font-semibold text-center pb-2">{name}</h3>
+  </div>
+  <div
+    class="w-full h-[250px] bg-gradient-to-b from-transparent to-black absolute z-10 flex items-end"
+  >
+    <h3 class="relative z-20 font-semibold text-center pb-2">{name}</h3>
   </div>
 </a>
