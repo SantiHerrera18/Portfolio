@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Technologies from "../components/Technologies.astro";
 import Card from "../components/Card.astro";
+
+import { projectsInfo } from "../helpers/projects";
+import type { ACTION_ERROR_CODES, ACTION_QUERY_PARAMS } from "astro:actions";
 ---
 
 <Layout title="Portfolio">
@@ -43,21 +46,11 @@ import Card from "../components/Card.astro";
         Projects
       </h2>
       <div class="flex gap-3">
-        <Card
-          name="Hotelify"
-          img="/Hotelify.jpg"
-          link="https://proyecto-hoteleria.vercel.app/"
-        />
-        <Card
-          name="Bytezone"
-          img="/Bytezone.jpg"
-          link="https://bytezone-flame.vercel.app/"
-        />
-        <Card
-          name="NewBank"
-          img="/Newbank.jpg"
-          link="https://new-bank-beta.vercel.app/"
-        />
+        {
+          projectsInfo.map((project) => {
+            return <Card {...project} />;
+          })
+        }
       </div>
     </section>
     <section class="p-2 w-full flex flex-col items-center">

@@ -1,11 +1,11 @@
 ---
-const { name, img, link } = Astro.props;
+const { name, img, link, description } = Astro.props;
 ---
 
 <a
   href={`${link}`}
   target="_blank"
-  class="flex relative flex-col items-center justify-center min-w-[250px] min-h-[250px] max-w-[250px] max-h-[250px] overflow-hidden rounded-lg group"
+  class="flex relative flex-col items-center justify-center min-w-[250px] min-h-[250px] max-w-[250px] max-h-[250px] overflow-hidden rounded-lg group transition-all duration-150"
 >
   <div
     style={`background-image:  url("${img}")`}
@@ -13,8 +13,13 @@ const { name, img, link } = Astro.props;
   >
   </div>
   <div
-    class="w-full h-[250px] bg-gradient-to-b from-transparent to-black absolute z-10 flex items-end"
+    class="w-full h-[250px] bg-gradient-to-b p-3 from-transparent to-black absolute z-10 flex flex-col justify-end group-hover:bg-[#000b] transition-all duration-500"
   >
     <h3 class="relative z-20 font-semibold text-center pb-2">{name}</h3>
+    <p
+      class="text-sm hidden group-hover:inline-block transition-all ease-in-out duration-150"
+    >
+      {description}
+    </p>
   </div>
 </a>
